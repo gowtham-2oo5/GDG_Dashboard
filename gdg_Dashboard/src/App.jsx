@@ -1,11 +1,19 @@
 import './App.css'
-import {Bar_Chart} from './components/BarChart'
+import {TicketDashboard} from '../src/Pages/TicketDashboard'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Dashboard } from './Pages/SocialMedia'
 
 function App() {
 
   return (
     <div>
-      <Bar_Chart />
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<TicketDashboard />} />
+            <Route path='/social' element={<Dashboard/>}/>
+          </Routes>
+      </BrowserRouter>
+      
     </div>
   )
 }
